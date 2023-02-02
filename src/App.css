@@ -1,4 +1,10 @@
-.App {
-  text-align: center;
+html{
+  font-size: 62.5%;
 }
-
+*, *::after, *::before{
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  overflow: hidden;
+}
