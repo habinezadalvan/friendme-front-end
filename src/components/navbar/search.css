@@ -1,0 +1,77 @@
+
+
+.searchBarContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    padding: 2rem;
+    background: linear-gradient(
+        90deg,
+        var(--main-color) 0%,
+        var(--second-color) 75%,
+        var(--main-color) 100%
+      );
+      border: none;
+}
+.searchBarWrapper{
+    flex: 10;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    margin-right: 1rem;
+    border-radius: 1.5rem;
+    background-color: var(--white-color);
+    padding: 0 .5rem;
+}
+
+.searchBarInput{
+    width: 85%;
+    height: 3rem;
+    border: none;
+    background-color: var(--white-color);
+    color: rgba(0, 0, 0, 0.733) !important;
+
+}
+.searchBarInput:focus{
+    outline: none;
+}
+
+.searchBarIcon{
+    font-size: 2rem !important;
+    color: var(--second-color);
+}
+
+.cancelSearchButton {
+    flex: 2;
+    height: 3rem;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.cancelSearchButton:hover{
+    background-color: var(--second-color);
+    color: var(--white-color);
+    transition: .2s;
+}
+
+.arrowCircle{
+    cursor: pointer;
+}
+
+@media (min-width: 981px){
+    .searchBarContainer{
+        display: none;
+    }
+}
+
+@media (max-width: 480px){
+    .searchBarContainer{
+        padding: 1rem;
+    }
+    .cancelSearchButton {
+        flex: 3;
+        font-size: 1.2rem;
+    }
+}
+
