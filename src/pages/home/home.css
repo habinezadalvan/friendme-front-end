@@ -1,3 +1,7 @@
 .home{
     color: brown;
 }
+
+:root{
+    --main-color: #B240DE;
+}

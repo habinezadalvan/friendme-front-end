@@ -1,13 +1,18 @@
-import { Home as HomeIcon } from "@mui/icons-material";
-import Home from "./pages/home/Home";
+import { lazy } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavBar from "./components/navbar/NavBar";
 import "./App.css";
+
+const Home = lazy(() => import("./pages/home/Home"));
 
 function App() {
   return (
-    <div className="App">
-      <HomeIcon />
-      <Home />
-    </div>
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path="/" index element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
