@@ -10,7 +10,8 @@
   background-color: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(194, 194, 194);
+  background-color: rgb(198, 196, 196);
+  height: 2rem;
 }
 
 .sidebarWrapper {
@@ -45,6 +46,7 @@
 }
 .sidebarFriendList {
   list-style: none;
+  transition: .5s;
 }
 .sidebarFriend {
   display: flex;

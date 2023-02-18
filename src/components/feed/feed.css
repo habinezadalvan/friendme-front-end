@@ -1,3 +1,11 @@
-.feed{
-    flex: 6;
+.feed {
+  flex: 5.5;
+  height: calc(100vh - 5rem);
+  overflow-y: scroll;
+}
+.feed::-webkit-scrollbar{
+    display: none;
+}
+.feedContainer {
+  padding: 2rem;
 }
