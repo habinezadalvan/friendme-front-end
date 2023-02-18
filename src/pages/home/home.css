@@ -1,7 +1,4 @@
-.home{
-    color: brown;
-}
-
-:root{
-    --main-color: #B240DE;
+.homeContainer{
+    display: flex;
+    font-size: 1.5rem;
 }

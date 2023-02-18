@@ -1,11 +1,14 @@
-import SearchBar from '../../components/navbar/SearchBar'
-import './home.css'
+import Feed from "../../components/feed/Feed";
+import RightBar from "../../components/rightBar/RightBar";
+import SideBar from "../../components/sideBar/SideBar";
+import "./home.css";
 
 export default function Home() {
   return (
-    <div>
-   
-      <h1 className="home">THIS IS THE HOME PAGE</h1>
+    <div className="homeContainer">
+      <SideBar />
+      <Feed />
+      <RightBar />
     </div>
-  )
+  );
 }
