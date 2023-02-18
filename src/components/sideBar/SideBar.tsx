@@ -9,8 +9,11 @@ import {
   Bookmark,
   VideocamRounded,
 } from "@mui/icons-material";
+import Friend from "./Friend";
+import { useBoolean } from "../../hooks/useBoolean";
 
 export default function SideBar() {
+  const [{ isVisible, setToTrue, setToFalse }] = useBoolean();
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
@@ -48,150 +51,31 @@ export default function SideBar() {
             <span className="sidebarListItemText">Courses</span>
           </li>
         </ul>
-        <button className="sidebarButton">Show more</button>
-        <hr className="sidebarHr" />
-        <ul className="sidebarFriendList">
-          <li className="sidebarFriend">
-            <div className="sidebarProfileImage">
-              <img
-                src="/assets/people/profile6.jpeg"
-                alt="profile picture"
-                className="sidebarFriendImg"
-              />
-            </div>
-            <span className="sidebarFriendName">John Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <div className="sidebarProfileImage">
-              <img
-                src="/assets/people/profile6.jpeg"
-                alt="profile picture"
-                className="sidebarFriendImg"
-              />
-            </div>
-            <span className="sidebarFriendName">John Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <div className="sidebarProfileImage">
-              <img
-                src="/assets/people/profile6.jpeg"
-                alt="profile picture"
-                className="sidebarFriendImg"
-              />
-            </div>
-            <span className="sidebarFriendName">John Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <div className="sidebarProfileImage">
-              <img
-                src="/assets/people/profile6.jpeg"
-                alt="profile picture"
-                className="sidebarFriendImg"
-              />
-            </div>
-            <span className="sidebarFriendName">John Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <div className="sidebarProfileImage">
-              <img
-                src="/assets/people/profile6.jpeg"
-                alt="profile picture"
-                className="sidebarFriendImg"
-              />
-            </div>
-            <span className="sidebarFriendName">John Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <div className="sidebarProfileImage">
-              <img
-                src="/assets/people/profile6.jpeg"
-                alt="profile picture"
-                className="sidebarFriendImg"
-              />
-            </div>
-            <span className="sidebarFriendName">John Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <div className="sidebarProfileImage">
-              <img
-                src="/assets/people/profile6.jpeg"
-                alt="profile picture"
-                className="sidebarFriendImg"
-              />
-            </div>
-            <span className="sidebarFriendName">John Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <div className="sidebarProfileImage">
-              <img
-                src="/assets/people/profile6.jpeg"
-                alt="profile picture"
-                className="sidebarFriendImg"
-              />
-            </div>
-            <span className="sidebarFriendName">John Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <div className="sidebarProfileImage">
-              <img
-                src="/assets/people/profile6.jpeg"
-                alt="profile picture"
-                className="sidebarFriendImg"
-              />
-            </div>
-            <span className="sidebarFriendName">John Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <div className="sidebarProfileImage">
-              <img
-                src="/assets/people/profile6.jpeg"
-                alt="profile picture"
-                className="sidebarFriendImg"
-              />
-            </div>
-            <span className="sidebarFriendName">John Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <div className="sidebarProfileImage">
-              <img
-                src="/assets/people/profile6.jpeg"
-                alt="profile picture"
-                className="sidebarFriendImg"
-              />
-            </div>
-            <span className="sidebarFriendName">John Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <div className="sidebarProfileImage">
-              <img
-                src="/assets/people/profile6.jpeg"
-                alt="profile picture"
-                className="sidebarFriendImg"
-              />
-            </div>
-            <span className="sidebarFriendName">John Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <div className="sidebarProfileImage">
-              <img
-                src="/assets/people/profile6.jpeg"
-                alt="profile picture"
-                className="sidebarFriendImg"
-              />
-            </div>
-            <span className="sidebarFriendName">John Doe</span>
-          </li>
-          <li className="sidebarFriend">
-            <div className="sidebarProfileImage">
-              <img
-                src="/assets/people/profile6.jpeg"
-                alt="profile picture"
-                className="sidebarFriendImg"
-              />
-            </div>
-            <span className="sidebarFriendName">John Doe</span>
-          </li>
-        </ul>
+        {!isVisible && (
+          <button onClick={setToTrue} className="sidebarButton">
+            Show more
+          </button>
+        )}
+        {isVisible && <hr className="sidebarHr" />}
+
+        {isVisible && (
+          <ul className="sidebarFriendList">
+            <Friend />
+            <Friend />
+            <Friend />
+            <Friend />
+            <Friend />
+            <Friend />
+            <Friend />
+            <Friend />
+            <Friend />
+          </ul>
+        )}
+        {isVisible && (
+          <button className="sidebarButton" onClick={setToFalse}>
+            Show less
+          </button>
+        )}
       </div>
     </div>
   );

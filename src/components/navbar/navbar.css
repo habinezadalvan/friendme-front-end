@@ -8,6 +8,8 @@
 
 .navBar {
   min-height: 5rem;
+  position: sticky;
+  top: 0;
 }
 
 .navBarTop {
@@ -15,8 +17,6 @@
   height: 5rem;
   display: flex;
   align-items: center;
-  position: static;
-  top: 0;
   background: linear-gradient(
     90deg,
     var(--main-color) 0%,
@@ -24,7 +24,7 @@
     var(--main-color) 100%
   );
   padding: 0 2rem;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .navBarLeft {
