@@ -11,6 +11,8 @@ import {
 } from "@mui/icons-material";
 import Friend from "./Friend";
 import { useBoolean } from "../../hooks/useBoolean";
+import { Users } from "../../dummyData";
+
 
 export default function SideBar() {
   const [{ isVisible, setToTrue, setToFalse }] = useBoolean();
@@ -60,15 +62,9 @@ export default function SideBar() {
 
         {isVisible && (
           <ul className="sidebarFriendList">
-            <Friend />
-            <Friend />
-            <Friend />
-            <Friend />
-            <Friend />
-            <Friend />
-            <Friend />
-            <Friend />
-            <Friend />
+            {Users.map((user) => (
+              <Friend key={user.id} user={user} loading="lazy" />
+            ))}
           </ul>
         )}
         {isVisible && (
