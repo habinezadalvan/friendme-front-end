@@ -1,25 +1,35 @@
 import "./post.css";
 import { MoreVert } from "@mui/icons-material";
-import {Users} from '../../dummyData';
+import { Users } from "../../dummyData";
+import { useState } from "react";
 
 type PostType = {
-  id: number,
-  description?: string,
-  img: string,
-  userId: number,
-  likes:  number,
-  comments: number,
-  createdAt: string,
-}
+  id: number;
+  description?: string;
+  img: string;
+  userId: number;
+  likes: number;
+  comments: number;
+  createdAt: string;
+};
 type UserType = {
-  id: number,
-  username: string,
-  profilePicture: string,
-}
-export default function Post({post}: {post:  PostType}) {
+  id: number;
+  username: string;
+  profilePicture: string;
+};
+type PostProps = {
+  post: PostType;
+};
+export default function Post({ post }: PostProps) {
+  const [likes, setLikes] = useState(post.likes);
+  const [isLiked, setIsLiked] = useState(false);
+  const user: UserType[] = Users.filter((user) => user.id === post.userId);
 
-  const user: UserType[] = Users.filter(user => user.id === post.userId);
+  const handleLikes = () => {
+    setIsLiked((prev) => !prev);
 
+    isLiked ? setLikes(likes - 1) : setLikes(likes + 1);
+  };
   return (
     <div className="post">
       <div className="postWrapper">
@@ -38,18 +48,28 @@ export default function Post({post}: {post:  PostType}) {
           </div>
         </div>
         <div className="postCenter">
-            <span className="postCenterDescription">{post?.description}</span>
-            <img src={post.img} alt="post" className="postCenterImg" />
+          <span className="postCenterDescription">{post?.description}</span>
+          <img src={post.img} alt="post" className="postCenterImg" />
         </div>
         <div className="postBottom">
-            <div className="postBottomLeft">
-                <img src="assets/like.png" alt="like icon" className="likeIcon" />
-                <img src="assets/heart.png" alt="like icon" className="likeIcon" />
-                <span className="postCounter">{post.likes} likes</span>
-            </div>
-            <div className="postBottomRight">
-                <span className="postComments">{post.comments} comments</span>
-            </div>
+          <div className="postBottomLeft">
+            <img
+              src="assets/like.png"
+              onClick={handleLikes}
+              alt="like icon"
+              className="likeIcon"
+            />
+            <img
+              src="assets/heart.png"
+              onClick={handleLikes}
+              alt="like icon"
+              className="likeIcon"
+            />
+            <span className="postCounter">{likes} likes</span>
+          </div>
+          <div className="postBottomRight">
+            <span className="postComments">{post.comments} comments</span>
+          </div>
         </div>
       </div>
     </div>
