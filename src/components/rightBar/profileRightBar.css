@@ -1,0 +1,39 @@
+.profileRightBarTittle{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.profileRightBarInfo{
+    display: flex;
+    flex-direction: column;
+   margin-bottom: 2rem;
+}
+.profileRightBarInfo span{
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: #555;
+}
+.profileRightBarInfo span b {
+    margin-right: 1rem;
+    font-weight: 500;
+}
+
+
+.userFriendsWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    cursor: pointer;
+}
+.userFriendsItem{
+    display: flex;
+    flex-direction: column;
+}
+
+.userFriendImg{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: .5rem;
+    margin-bottom: .5rem;
+}

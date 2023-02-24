@@ -63,7 +63,7 @@ export default function SideBar() {
         {isVisible && (
           <ul className="sidebarFriendList">
             {Users.map((user) => (
-              <Friend key={user.id} user={user} loading="lazy" />
+              <Friend key={user.id} user={user} />
             ))}
           </ul>
         )}

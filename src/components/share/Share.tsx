@@ -9,6 +9,7 @@ export default function Share() {
             src="assets/people/profile5.jpeg"
             alt="share profile"
             className="shareImg"
+            loading="lazy"
           />
           <input placeholder="What's in your mind?" className="shareInput" />
         </div>
