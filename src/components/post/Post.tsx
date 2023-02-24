@@ -39,6 +39,7 @@ export default function Post({ post }: PostProps) {
               src={user[0]?.profilePicture}
               alt="user profile"
               className="postTopUserImg"
+              loading="lazy"
             />
             <span className="postUserName">{user[0]?.username}</span>
             <span className="postTime">{post.createdAt}</span>
@@ -49,7 +50,7 @@ export default function Post({ post }: PostProps) {
         </div>
         <div className="postCenter">
           <span className="postCenterDescription">{post?.description}</span>
-          <img src={post.img} alt="post" className="postCenterImg" />
+          <img src={post.img} loading="lazy" alt="post" className="postCenterImg" />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
@@ -58,12 +59,14 @@ export default function Post({ post }: PostProps) {
               onClick={handleLikes}
               alt="like icon"
               className="likeIcon"
+              loading="lazy"
             />
             <img
               src="assets/heart.png"
               onClick={handleLikes}
               alt="like icon"
               className="likeIcon"
+              loading="lazy"
             />
             <span className="postCounter">{likes} likes</span>
           </div>

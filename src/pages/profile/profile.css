@@ -1,0 +1,18 @@
+.profile{
+    display: flex;
+    background-color: white;
+    font-size: 1.5rem;
+    
+}
+
+.profileRight{
+    flex: 9;
+    overflow-y: scroll;
+    height: calc(100vh - 5rem);
+}
+
+
+.profileRightBottom{
+    display: flex;
+}
+

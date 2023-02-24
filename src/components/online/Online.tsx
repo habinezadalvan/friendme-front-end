@@ -9,6 +9,7 @@ export default function OnlineUser({ user }: { user: UserType }) {
           src={user.profilePicture}
           alt="profile"
           className="onlineFriendImg"
+          loading="lazy"
         />
         <span className="onlineFriendBadge"></span>
       </div>
