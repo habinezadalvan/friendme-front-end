@@ -1,0 +1,112 @@
+:root {
+  --main-color: #b240de;
+  --second-color: #751bc0;
+  --third-color: #440b73;
+  --white-color: white;
+  --pink-color: #fc04f8;
+}
+.userAccount {
+  background-image: linear-gradient(
+      45deg,
+      #870393f9 0%,
+      #8c098cce 75%,
+      #8c00ff47 100%
+    ),
+    url("/public/assets/networkbg.png");
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-color: rgb(0, 0, 0);
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userAccountWrapper {
+  width: 25%;
+  max-height: 80vh;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 3rem 0;
+  font-size: 1.5rem;
+}
+
+.userAccountForm {
+  margin: 3rem 0;
+}
+
+.userAccountInput {
+  width: 80%;
+  height: 3.5rem;
+  /* border-radius: 0.5rem; */
+  padding-left: 0.5rem;
+  border: none;
+
+  border-bottom: 0.2rem solid rgb(111, 110, 112);
+  margin-bottom: 1rem;
+}
+
+.userAccountInput::placeholder,
+.userAccountInput:-ms-input-placeholder,
+.userAccountInput::-ms-input-placeholder {
+  color: #7e7d7e;
+}
+
+.userAccountInput:focus {
+  outline: none;
+  /* outline-color: #ab04a8; */
+}
+.userAccountInput[type="date"] {
+  color: #7e7d7e;
+}
+.userAccountInput[type="date"]::-webkit-calendar-picker-indicator {
+  color: #7e7d7e;
+}
+
+.userAccountSubmitButton {
+  width: 80%;
+  height: 4rem;
+  border: none;
+  border-radius: 3rem;
+  background-color: #b240de;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.userAccountSubmitButton:hover {
+  background-color: #b140ded9;
+  transition: 0.1s ease-in-out;
+}
+
+.userAccountAlt {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.redirectButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  font-size: 1.8rem;
+}
+.redirectButton:hover {
+  color: #b140ded9;
+  transition: 0.1s ease-in-out;
+
+}
+.userAccoutArrowRightAlt {
+  font-size: 2rem !important;
+}
