@@ -110,3 +110,27 @@
 .userAccoutArrowRightAlt {
   font-size: 2rem !important;
 }
+
+@media (max-width: 1200px){
+  .userAccountWrapper{
+    width: 30%;
+  }
+}
+@media (max-width: 980px){
+  .userAccountWrapper{
+    width: 40%;
+  }
+}
+
+@media (max-width: 680px){
+  .userAccountWrapper{
+    width: 60%;
+  }
+}
+@media (max-width: 480px){
+  .userAccountWrapper{
+    width: 95%;
+  }
+}
+
+
