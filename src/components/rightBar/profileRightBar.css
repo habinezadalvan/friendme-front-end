@@ -18,6 +18,13 @@
     font-weight: 500;
 }
 
+.userFriends{
+    max-height: 60vh;
+    overflow-y: scroll;
+}
+.userFriends::-webkit-scrollbar{
+    display: none;
+}
 
 .userFriendsWrapper{
     display: flex;
