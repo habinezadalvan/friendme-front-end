@@ -36,6 +36,7 @@
   font-size: 1.5rem;
 }
 
+
 .userAccountForm {
   margin: 3rem 0;
 }
@@ -43,7 +44,6 @@
 .userAccountInput {
   width: 80%;
   height: 3.5rem;
-  /* border-radius: 0.5rem; */
   padding-left: 0.5rem;
   border: none;
 
@@ -59,7 +59,6 @@
 
 .userAccountInput:focus {
   outline: none;
-  /* outline-color: #ab04a8; */
 }
 .userAccountInput[type="date"] {
   color: #7e7d7e;
@@ -90,6 +89,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding: 0 1rem;
 }
 
 .redirectButton {
@@ -122,6 +122,12 @@
   }
 }
 
+@media (max-width: 768px){
+  .userAccountWrapper{
+    width: 50%;
+  }
+}
+
 @media (max-width: 680px){
   .userAccountWrapper{
     width: 60%;
@@ -130,6 +136,9 @@
 @media (max-width: 480px){
   .userAccountWrapper{
     width: 95%;
+  }
+  .redirectButton{
+    font-size: 1.5rem;
   }
 }
 
