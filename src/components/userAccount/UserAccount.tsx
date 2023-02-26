@@ -1,15 +1,16 @@
+import { useState } from "react";
+import Login from "./Login";
+import SignUp from "./SignUp";
 import "./userAccount.css";
-import { ArrowRightAlt } from "@mui/icons-material";
-import { ReactHTMLElement } from "react";
 
-type UserAccountProps = {
-  children: string | JSX.Element | JSX.Element[];
-};
 
-export default function UserAccount({ children }: UserAccountProps) {
+
+export default function UserAccount() {
+  const [show, setShow] = useState(false);
   return (
     <div className="userAccount">
-      <div className="userAccountWrapper">{children}</div>
+      
+      <div className="userAccountWrapper">{!show ? <SignUp setShow = {setShow} /> : <Login setShow = {setShow} />}</div>
     </div>
   );
 }

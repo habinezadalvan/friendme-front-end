@@ -1,7 +1,9 @@
 import {ArrowRightAlt} from '@mui/icons-material';
-import { redirect} from 'react-router-dom'
 
-export default function SignUp() {
+type Props = {
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
+};
+export default function SignUp({setShow}: Props) {
 
   return (
     <>
@@ -16,7 +18,7 @@ export default function SignUp() {
      </form>
       <div className="userAccountAlt">
         <span className="userAccountInfo">Already have an account?</span>
-        <button onClick={() => redirect('/login')} className="redirectButton"><span>Sign in</span> <ArrowRightAlt className='userAccoutArrowRightAlt'/></button>
+        <button onClick={() => setShow(true)} className="redirectButton"><span>Sign in</span> <ArrowRightAlt className='userAccoutArrowRightAlt'/></button>
       </div>
     </>
   )
