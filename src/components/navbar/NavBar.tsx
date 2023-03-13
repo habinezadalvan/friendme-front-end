@@ -10,6 +10,7 @@ import NavSearchInput from "./NavSearchInput";
 import SearchBar from "./SearchBar";
 import { useState, Suspense } from "react";
 import { Link, Outlet } from "react-router-dom";
+import Spinner from "../spinner/Spinner";
 
 export default function NavBar() {
   const [isVisible, setIsVisible] = useState(false);
@@ -84,7 +85,7 @@ export default function NavBar() {
         {isVisible && <SearchBar onClick={() => setIsVisible(false)} />}
         <div className="searchResults"></div>
       </div>
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense fallback={<Spinner />}>
         <Outlet />
       </Suspense>
     </>
