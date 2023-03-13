@@ -9,7 +9,7 @@ import {
 import NavSearchInput from "./NavSearchInput";
 import SearchBar from "./SearchBar";
 import { useState, Suspense } from "react";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 export default function NavBar() {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,7 +18,9 @@ export default function NavBar() {
       <div className="navBar">
         <div className="navBarTop">
           <div className="navBarLeft">
-            <span className="logo">Lovine</span>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <span className="logo">Lovine</span>
+            </Link>
           </div>
           <div className="navBarCenter">
             <NavSearchInput classname="largeScreen" />
@@ -31,29 +33,33 @@ export default function NavBar() {
           </div>
           <div className="navBarRight">
             <div className="navBarLinks navBarRightCommon">
-              <span className="navBarLink">Home page</span>
+              <Link to="/" className="navBarLink">
+                Home page
+              </Link>
               <div className="iconContainer hiddenIconContainer">
                 <Home className="icon " />
-                <div className="hiddenSpan">Home page</div>
+                <span className="hiddenSpan">Home page</span>
               </div>
-              <span className="navBarLink">Timeline</span>
+              <Link to="/" className="navBarLink">
+                Timeline
+              </Link>
               <div className="iconContainer hiddenIconContainer">
                 <Timeline className="icon " />
-                <div className="hiddenSpan">Timeline</div>
+                <span className="hiddenSpan">Timeline</span>
               </div>
             </div>
             <div className="navBarIcons navBarRightCommon">
               <div className="navBarItem">
                 <div className="iconContainer">
                   <Person className="icon" />
-                  <div className="hiddenSpan">People</div>
+                  <span className="hiddenSpan">People</span>
                 </div>
                 <span className="navBarIconBadge">1</span>
               </div>
               <div className="navBarItem">
                 <div className="iconContainer">
                   <Chat className="icon" />
-                  <div className="hiddenSpan">Messages</div>
+                  <span className="hiddenSpan">Messages</span>
                 </div>
                 <span className="navBarIconBadge">4</span>
               </div>
